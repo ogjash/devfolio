@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -36,9 +38,13 @@
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-pixel-square: var(--font-geist-pixel-square);
 
   --shadow-popover: var(--shadow-popover);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
 }
 
 @utility no-scrollbar {
@@ -97,184 +103,71 @@
 }
 
 :root {
-  /* One Light — #fafafa */
   --background: #fafafa;
-
-  /* One Dark Night Flat foreground — #16191d */
   --foreground: #16191d;
-
-  /* One Dark Night Flat primary — #16191d */
   --primary: #16191d;
-
-  /* One Dark Night Flat primary-foreground — #fafafa */
   --primary-foreground: #fafafa;
-
-  /* One Light secondary — #f0f0f0 */
   --secondary: #f0f0f0;
-
-  /* One Dark Night Flat secondary-foreground — #16191d */
   --secondary-foreground: #16191d;
-
-  /* One Light muted — #f0f0f0 */
   --muted: #f0f0f0;
-
-  /* One Dark Night Flat comment — #5c6370 */
   --muted-foreground: #5c6370;
-
-  /* One Light card — #fafafa */
   --card: #fafafa;
-
-  /* One Dark Night Flat card-foreground — #16191d */
   --card-foreground: #16191d;
-
-  /* One Light popover — #fafafa */
   --popover: #fafafa;
-
-  /* One Dark Night Flat popover-foreground — #16191d */
   --popover-foreground: #16191d;
-
-  --popover-border: color-mix(in oklab, #383a42 15%, transparent);
-
-  /* One Light accent — #e8e8e8 */
+  --popover-border: color-mix(in oklab, #16191d 15%, transparent);
   --accent: #e8e8e8;
-
   --accent-muted: color-mix(in oklab, var(--accent) 50%, transparent);
-
-  /* One Dark Night Flat accent-foreground — #16191d */
   --accent-foreground: #16191d;
-
-  /* One Light border — #d3d3d3 */
   --border: #d3d3d3;
-
   --edge: color-mix(in oklab, var(--border) 64%, var(--background));
-
-  /* One Light input — #d3d3d3 */
   --input: #d3d3d3;
-
-  /* One Dark Night Flat ring — #61afef (blue) */
   --ring: #61afef;
-
-  /* One Dark Night Flat info — #56b6c2 (cyan) */
   --info: #56b6c2;
-
-  /* One Dark Night Flat success — #98c379 (green) */
   --success: #98c379;
-
-  /* One Dark Night Flat destructive — #e06c75 (red) */
   --destructive: #e06c75;
-
-  /* One Dark Night Flat link — #61afef (blue) */
   --link: #61afef;
-
-  /* One Light code — #f0f0f0 */
   --code: #f0f0f0;
-
-  /* One Dark Night Flat code-foreground — #16191d */
   --code-foreground: #16191d;
-
-  /* One Dark Night Flat code-number — #d19a66 (orange) */
   --code-number: #d19a66;
-
-  /* One Light code-highlight — #e8e8e8 */
   --code-highlight: #e8e8e8;
-
-  /* One Dark Night Flat selection — #16191d */
   --selection: #16191d;
-
-  /* One Dark Night Flat selection-foreground — #fafafa */
   --selection-foreground: #fafafa;
-
   --shadow-popover: 0 6px 24px rgba(0, 0, 0, 0.12);
+  --radius: 0.625rem;
 }
 
 .dark {
-  /* One Dark Night Flat background — #16191d */
   --background: #16191d;
-
-  /* One Dark foreground — #abb2bf */
   --foreground: #abb2bf;
-
-  /* One Dark primary — #abb2bf */
-  --primary: #abb2bf;
-
-  /* One Dark Night Flat primary-foreground — #16191d */
+  --primary: #cbcbcb;
   --primary-foreground: #16191d;
-
-  /* One Dark Night Flat secondary — #23272e */
   --secondary: #23272e;
-
-  /* One Dark Night Flat secondary-foreground — #abb2bf */
   --secondary-foreground: #abb2bf;
-
-  /* One Dark Night Flat muted — #23272e */
   --muted: #23272e;
-
-  /* One Dark comment — #5c6370 */
   --muted-foreground: #5c6370;
-
-  /* One Dark Night Flat card — #1e2227 */
   --card: #1e2227;
-
-  /* One Dark Night Flat card-foreground — #abb2bf */
   --card-foreground: #abb2bf;
-
-  /* One Dark Night Flat popover — #1e2227 */
   --popover: #1e2227;
-
-  /* One Dark popover-foreground — #abb2bf */
   --popover-foreground: #abb2bf;
-
-  /* One Dark popover-border — #3e4451 */
   --popover-border: #3e4451;
-
-  /* One Dark accent — #2c313c */
-  --accent: #2c313c;
-
+  --accent: #23272e;
   --accent-muted: color-mix(in oklab, var(--accent) 20%, transparent);
-
-  /* One Dark accent-foreground — #abb2bf */
   --accent-foreground: #abb2bf;
-
-  /* One Dark border — #3e4451 */
   --border: #3e4451;
-
   --edge: color-mix(in oklab, var(--border) 70%, var(--background));
-
   --input: rgba(255, 255, 255, 0.08);
-
-  /* One Dark ring — #61afef (blue) */
   --ring: #61afef;
-
-  /* One Dark info — #56b6c2 (cyan) */
   --info: #56b6c2;
-
-  /* One Dark success — #98c379 (green) */
   --success: #98c379;
-
-  /* One Dark destructive — #e06c75 (red) */
   --destructive: #e06c75;
-
-  /* One Dark link — #61afef (blue) */
   --link: #61afef;
-
-  /* One Dark Night Flat code — #1e2227 */
   --code: #1e2227;
-
-  /* One Dark code-foreground — #abb2bf */
   --code-foreground: #abb2bf;
-
-  /* One Dark code-number — #d19a66 (orange) */
   --code-number: #d19a66;
-
-  /* One Dark code-highlight — #2c313c */
   --code-highlight: #2c313c;
-
-  /* One Dark selection — #3e4451 */
   --selection: #3e4451;
-
-  /* One Dark selection-foreground — #abb2bf */
   --selection-foreground: #abb2bf;
-
   --shadow-popover: 0 0 24px rgba(0, 0, 0, 0.5);
 }
 
@@ -297,7 +190,6 @@
     text-rendering: optimizeLegibility;
   }
 
-  /* Custom scrollbar styling. Thanks @shadcn-ui */
   ::-webkit-scrollbar {
     width: 5px;
   }
@@ -332,4 +224,3 @@
     transition: none;
   }
 }
-

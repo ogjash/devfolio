@@ -40,7 +40,7 @@ export function PanelHeader({
 }: PanelHeaderProps) {
   return (
     <div
-      className={`screen-line-after px-4 ${className}`}
+      className={`screen-line-after ${className}`}
       {...props}
     >
       {children}
@@ -77,7 +77,7 @@ export function PanelContent({
   ...props
 }: PanelContentProps) {
   return (
-    <div className={`p-4 ${className}`} {...props}>
+    <div className={`p-2 ${className}`} {...props}>
       {children}
     </div>
   );
