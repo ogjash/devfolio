@@ -17,7 +17,7 @@ export function Github() {
             <div className="flex flex-row">
                 <Avatar.Root className="inline-flex size-12 items-center justify-center overflow-hidden rounded-full bg-primary align-middle text-base font-medium text-background select-none">
                     <Avatar.Image
-                        src="https://avatars.githubusercontent.com/u/77024639?s=400&u=03aa540e8c6555a35e37359092da1841c72fbb02&v=4"
+                        src="/images/profile.png"
                         width="48"
                         height="48"
                         className="size-full object-cover"
@@ -122,7 +122,7 @@ export function Leetcode() {
             <div className="flex flex-row items-center gap-3">
                 <Avatar.Root className="inline-flex size-12 items-center justify-center overflow-hidden rounded-full bg-primary align-middle text-base font-medium text-background select-none">
                     <Avatar.Image
-                        src="https://avatars.githubusercontent.com/u/77024639?s=400&u=03aa540e8c6555a35e37359092da1841c72fbb02&v=4"
+                        src="/images/profile.png"
                         width="48"
                         height="48"
                         className="size-full object-cover"
@@ -165,7 +165,7 @@ export function Codeforces() {
             <div className="flex flex-row items-center gap-3">
                 <Avatar.Root className="inline-flex size-12 items-center justify-center overflow-hidden rounded-full bg-primary align-middle text-base font-medium text-background select-none">
                     <Avatar.Image
-                        src="https://avatars.githubusercontent.com/u/77024639?s=400&u=03aa540e8c6555a35e37359092da1841c72fbb02&v=4"
+                        src="/images/profile.png"
                         width="48"
                         height="48"
                         className="size-full object-cover"
@@ -208,7 +208,7 @@ export default function Socials() {
                 </h1>
 
 
-                <div className="flex flex-row gap-2 mt-2">
+                <div className="flex flex-row flex-wrap gap-2 mt-2">
 
                     <Tooltip
                         containerClassName="text-foreground bg-background dark:bg-background dark:text-foreground"
@@ -220,7 +220,7 @@ export default function Socials() {
                                 variant="secondary"
                             >
                                 <FaGithub />
-                                Github
+                                <span className="hidden sm:inline">Github</span>
                             </Button>
                         </a>
                         
@@ -237,7 +237,7 @@ export default function Socials() {
                                 variant="secondary"
                             >
                                 <FaLinkedin />
-                                LinkedIn
+                                <span className="hidden sm:inline">LinkedIn</span>
                             </Button>
                         </a>
                         
@@ -254,7 +254,7 @@ export default function Socials() {
                                 variant="secondary"
                             >
                                 <FaXTwitter />
-                                Twitter
+                                <span className="hidden sm:inline">Twitter</span>
                             </Button>
                         </a>
                         
@@ -271,7 +271,7 @@ export default function Socials() {
                                 variant="secondary"
                             >
                                 <SiLeetcode />
-                                LeetCode
+                                <span className="hidden sm:inline">LeetCode</span>
                             </Button>
                         </a>
                         
@@ -288,7 +288,7 @@ export default function Socials() {
                                 variant="secondary"
                             >
                                 <SiCodeforces />
-                                Codeforces
+                                <span className="hidden sm:inline">Codeforces</span>
                             </Button>
                         </a>
                         

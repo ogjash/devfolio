@@ -295,7 +295,7 @@ export const ContributionGraph = ({
       }}
     >
       <div
-        className={cn("flex w-max max-w-full flex-col gap-2", className)}
+        className={cn("flex w-max max-w-full flex-col", className)}
         style={{ fontSize, ...style }}
         {...props}
       />
@@ -329,10 +329,10 @@ export const ContributionGraphBlock = ({
     <rect
       className={cn(
         'data-[level="0"]:fill-muted',
-        'data-[level="1"]:fill-muted-foreground/20',
-        'data-[level="2"]:fill-muted-foreground/40',
-        'data-[level="3"]:fill-muted-foreground/60',
-        'data-[level="4"]:fill-muted-foreground/80',
+        'data-[level="1"]:fill-foreground/20',
+        'data-[level="2"]:fill-foreground/40',
+        'data-[level="3"]:fill-foreground/70',
+        'data-[level="4"]:fill-foreground',
         className
       )}
       data-count={activity.count}
@@ -378,14 +378,14 @@ export const ContributionGraphCalendar = ({
 
   return (
     <div
-      className={cn("max-w-full overflow-x-auto overflow-y-hidden", className)}
+      className={cn("max-w-full overflow-hidden", className)}
       {...props}
     >
       <svg
-        className="block overflow-visible"
+        className="block overflow-visible w-full"
         height={height}
         viewBox={`0 0 ${width} ${height}`}
-        width={width}
+        preserveAspectRatio="xMinYMid meet"
       >
         <title>Contribution Graph</title>
         {!hideMonthLabels && (
@@ -453,7 +453,7 @@ export const ContributionGraphTotalCount = ({
   }
 
   return (
-    <div className={cn("text-muted-foreground", className)} {...props}>
+    <div className={cn("text-foreground", className)} {...props}>
       {labels.totalCount
         ? labels.totalCount
             .replace("{{count}}", String(totalCount))
@@ -482,7 +482,7 @@ export const ContributionGraphLegend = ({
       className={cn("ml-auto flex items-center gap-[3px]", className)}
       {...props}
     >
-      <span className="mr-1 text-muted-foreground">
+      <span className="mr-1 text-foreground">
         {labels.legend?.less || "Less"}
       </span>
       {new Array(maxLevel + 1).fill(undefined).map((_, level) =>
@@ -493,12 +493,11 @@ export const ContributionGraphLegend = ({
             <title>{`${level} contributions`}</title>
             <rect
               className={cn(
-                "stroke-[1px] stroke-border",
                 'data-[level="0"]:fill-muted',
-                'data-[level="1"]:fill-muted-foreground/20',
-                'data-[level="2"]:fill-muted-foreground/40',
-                'data-[level="3"]:fill-muted-foreground/60',
-                'data-[level="4"]:fill-muted-foreground/80'
+                'data-[level="1"]:fill-foreground/20',
+                'data-[level="2"]:fill-foreground/40',
+                'data-[level="3"]:fill-foreground/70',
+                'data-[level="4"]:fill-foreground'
               )}
               data-level={level}
               height={blockSize}
@@ -509,7 +508,7 @@ export const ContributionGraphLegend = ({
           </svg>
         )
       )}
-      <span className="ml-1 text-muted-foreground">
+      <span className="ml-1 text-foreground">
         {labels.legend?.more || "More"}
       </span>
     </div>

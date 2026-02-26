@@ -12,18 +12,13 @@ export function Panel({ className = "", children, ...props }: PanelProps) {
   );
 }
 
-// ─── DotGridPanel ─────────────────────────────────────────────────────────────
+// ─── SubPanel ─────────────────────────────────────────────────────────────────
 
-export function DotGridPanel({ className = "", children, ...props }: PanelProps) {
+type SubPanelProps = React.HTMLAttributes<HTMLDivElement>;
+
+export function SubPanel({ className = "", children, ...props }: SubPanelProps) {
   return (
-    <div className={`screen-line-after dashed-border-x relative min-h-30 md:min-h-58 ${className}`} {...props}>
-      <div
-        className="absolute inset-3 -z-10"
-        style={{
-          backgroundImage: "radial-gradient(circle, var(--color-edge) 1px, transparent 1px)",
-          backgroundSize: "7px 7px",
-        }}
-      />
+    <div className={`dashed-line-after dashed-border-x ${className}`} {...props}>
       {children}
     </div>
   );
@@ -78,6 +73,23 @@ export function PanelContent({
 }: PanelContentProps) {
   return (
     <div className={`p-2 ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}
+
+// ─── DotGridPanel ─────────────────────────────────────────────────────────────
+
+export function DotGridPanel({ className = "", children, ...props }: PanelProps) {
+  return (
+    <div className={`screen-line-after dashed-border-x relative min-h-30 md:min-h-58 ${className}`} {...props}>
+      <div
+        className="absolute inset-3 -z-10"
+        style={{
+          backgroundImage: "radial-gradient(circle, var(--color-edge) 1px, transparent 1px)",
+          backgroundSize: "7px 7px",
+        }}
+      />
       {children}
     </div>
   );

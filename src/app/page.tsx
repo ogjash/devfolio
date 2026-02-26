@@ -1,4 +1,4 @@
-import { DotGridPanel, Panel } from "@/components/panel";
+import { DotGridPanel, Panel, PanelHeader, SubPanel } from "@/components/panel";
 import { ProfileContent } from "@/views/home/profile-content";
 import { ProfileHeader } from "@/views/home/profile-header";
 
@@ -13,7 +13,16 @@ export default function Home() {
       <Panel>
         <ProfileContent />
       </Panel>
+
+      <Panel>
+        <PanelHeader className="p-2 text-md md:text-lg font-bold">
+          Experiences
+        </PanelHeader>
+      </Panel>
       
+      <SubPanel>
+        Happt
+      </SubPanel>
     </main>
   );
 }

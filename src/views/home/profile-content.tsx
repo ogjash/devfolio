@@ -1,3 +1,4 @@
+import Graph from "@/components/kibo-ui/contribution-graph/graph";
 import { PanelContent, PanelHeader } from "@/components/panel";
 import Socials from "@/components/socials";
 import { Button } from "@/components/ui/button";
@@ -31,6 +32,8 @@ export function ProfileContent() {
             </PanelContent>
 
             <Socials />
+
+            <Graph username="ogjash" />
             
         </PanelHeader>
     );

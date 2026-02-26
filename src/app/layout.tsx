@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Providers } from "@/components/providers";
+import { TooltipProvider } from "@/components/ui/tooltip"
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -24,11 +26,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="overflow-x-hidden">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
       >
-        <Providers>{children}</Providers>
+        <TooltipProvider>
+          <Providers>{children}</Providers>
+        </TooltipProvider>
       </body>
     </html>
   );

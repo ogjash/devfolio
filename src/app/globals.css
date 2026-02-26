@@ -81,6 +81,26 @@
   }
 }
 
+@utility dashed-line-after {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    height: 1px;
+    width: 100%;
+    background-image: repeating-linear-gradient(
+      to right,
+      var(--color-edge) 0,
+      var(--color-edge) 6px,
+      transparent 6px,
+      transparent 14px
+    );
+  }
+}
+
 @utility dashed-border-x {
   background-image:
     repeating-linear-gradient(
