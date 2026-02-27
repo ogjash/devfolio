@@ -328,9 +328,10 @@ export const ContributionGraphBlock = ({
   return (
     <rect
       className={cn(
+        'stroke-foreground/10',
         'data-[level="0"]:fill-muted',
-        'data-[level="1"]:fill-foreground/20',
-        'data-[level="2"]:fill-foreground/40',
+        'data-[level="1"]:fill-foreground/30',
+        'data-[level="2"]:fill-foreground/50',
         'data-[level="3"]:fill-foreground/70',
         'data-[level="4"]:fill-foreground',
         className
@@ -341,6 +342,7 @@ export const ContributionGraphBlock = ({
       height={blockSize}
       rx={blockRadius}
       ry={blockRadius}
+      strokeWidth={1}
       width={blockSize}
       x={(blockSize + blockMargin) * weekIndex}
       y={labelHeight + (blockSize + blockMargin) * dayIndex}

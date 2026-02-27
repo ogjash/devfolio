@@ -1,3 +1,4 @@
+import Experiences from "@/components/experiences";
 import { DotGridPanel, Panel, PanelHeader, SubPanel } from "@/components/panel";
 import { ProfileContent } from "@/views/home/profile-content";
 import { ProfileHeader } from "@/views/home/profile-header";
@@ -15,14 +16,10 @@ export default function Home() {
       </Panel>
 
       <Panel>
-        <PanelHeader className="p-2 text-md md:text-lg font-bold">
-          Experiences
-        </PanelHeader>
+        <Experiences />
       </Panel>
       
-      <SubPanel>
-        Happt
-      </SubPanel>
+
     </main>
   );
 }

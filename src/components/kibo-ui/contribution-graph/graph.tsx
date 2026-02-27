@@ -16,12 +16,12 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { formatISO, subDays } from "date-fns";
+import { Skeleton } from "@/components/ui/skeleton";
+import { user } from "@/data/user";
 import { useEffect, useRef, useState } from "react";
 import { RiErrorWarningFill } from "react-icons/ri";
-import { RiLoaderLine } from "react-icons/ri";
 
 const MAX_LEVEL = 4;
-const DEFAULT_USERNAME = "ogjash";
 
 type ContributionsApiResponse = {
   contributions?: Array<{
@@ -32,7 +32,7 @@ type ContributionsApiResponse = {
   total?: Record<string, number>;
 };
 
-const Graph = ({ username = DEFAULT_USERNAME }: { username?: string }) => {
+const Graph = ({ username = user.github }: { username?: string }) => {
   const [data, setData] = useState<Activity[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -118,13 +118,10 @@ const Graph = ({ username = DEFAULT_USERNAME }: { username?: string }) => {
   if (loading) {
     return (
       <div className="px-3 mb-3 flex flex-col gap-2">
-        <div className="w-full h-[70px] md:h-[112px]  rounded-md bg-muted animate-pulse" />
+        <Skeleton className="w-full h-[70px] md:h-[112px]" />
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
-            <RiLoaderLine className="animate-spin size-3.5" />
-            <span>Loading contributions...</span>
-          </div>
-          <div className="h-3 w-24 rounded bg-muted animate-pulse" />
+          <Skeleton className="h-3 w-40" />
+          <Skeleton className="h-3 w-24" />
         </div>
       </div>
     );

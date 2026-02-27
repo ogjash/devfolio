@@ -1,0 +1,68 @@
+export const socials = {
+  github: {
+    label: "Github",
+    url: "https://github.com/ogjash",
+    profile: {
+      avatar: "/images/profile.png",
+      fallback: "OG",
+      name: "Jashanpreet Singh",
+      username: "ogjash",
+      bio: "Life is a story—make yours a bestseller",
+      location: "New Delhi, India",
+      repositories: 22,
+      followers: 10,
+    },
+  },
+  linkedin: {
+    label: "LinkedIn",
+    url: "https://linkedin.com/in/ijashan",
+    profile: {
+      banner: "/images/linkedin/banner.jpeg",
+      avatar: "/images/linkedin/profile.jpeg",
+      name: "Jashanpreet Singh",
+      headline: "Pre-Final Year @NSUT | Full Stack Web Developer",
+      location: "New Delhi, India",
+      connections: "500+",
+    },
+  },
+  twitter: {
+    label: "Twitter",
+    url: "https://x.com/OGjashan",
+    profile: {
+      banner: "/images/twitter/banner.jpeg",
+      avatar: "/images/twitter/profile.jpg",
+      name: "Jashanpreet Singh",
+      handle: "@OGjashan",
+      bio: "21, VScode regular user",
+      following: 21,
+      followers: 5,
+    },
+  },
+  leetcode: {
+    label: "LeetCode",
+    url: "https://leetcode.com/u/itsOG",
+    profile: {
+      avatar: "/images/profile.png",
+      fallback: "OG",
+      name: "Jashanpreet Singh",
+      username: "itsOG",
+      solved: 20,
+      easy: 7,
+      medium: 12,
+      hard: 1,
+    },
+  },
+  codeforces: {
+    label: "Codeforces",
+    url: "https://codeforces.com/profile/O.G.",
+    profile: {
+      avatar: "/images/profile.png",
+      fallback: "OG",
+      name: "Jashanpreet Singh",
+      username: "O.G.",
+      rating: 1180,
+      rank: "Newbie",
+      problems: 165,
+    },
+  },
+} as const;

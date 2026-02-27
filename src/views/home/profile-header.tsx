@@ -4,14 +4,15 @@ import AvatarComponent from "@/components/avatar";
 import { PanelHeader, PanelTitle } from "@/components/panel";
 import { TextFlip } from "@/components/text-flip";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { user } from "@/data/user";
 import { motion } from "motion/react";
 
 export function ProfileHeader() {
   return (
     <PanelHeader className="relative flex items-center gap-4 mx-4">
-      <AvatarComponent />
+      <AvatarComponent src={user.avatar} alt={user.name} fallback={user.initials} />
       <div className="flex flex-col">
-        <PanelTitle>Jashan Preet Singh</PanelTitle>
+        <PanelTitle className="text-[1.5rem]">{user.name}</PanelTitle>
         <TextFlip
             className="text-sm text-muted-foreground"
             as={motion.span}
@@ -21,15 +22,12 @@ export function ProfileHeader() {
                 exit: { y: 10, opacity: 0 },
             }}
         >
-          <span>Full Stack Developer</span>
-          <span>Freelancer</span>
-          <span>Open Source Contributor</span>
-          <span>Learning Web3</span>
-          <span>Turning ideas into reality</span>
-          <span>Design Engineer</span>
+          {user.roles.map((role) => (
+            <span key={role}>{role}</span>
+          ))}
         </TextFlip>
       </div>
-      <div className="absolute top-0 right-0 m-2">
+      <div className="absolute top-0 right-0 md:m-2">
         <ThemeToggle />
       </div>
     </PanelHeader>
