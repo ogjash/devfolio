@@ -15,7 +15,7 @@ export const projects: Project[] = [
     description:
       "A platform to create AI agents tailored to specific niche - then join live meetings to have real-time conversations with your agents.",
     projectImage: "/images/projects/coming-soon.png",
-    backgroundImage: "/images/pattern/bg1.jpg",
+    backgroundImage: "/images/pattern/bg4.jpg",
     status: "building",
   },
   {
@@ -24,8 +24,8 @@ export const projects: Project[] = [
     description:
       "A platform for college mentors to predict student drop risk using our ML model, enabling early intervention and better student retention.",
     projectImage: "/images/projects/mentor-signal.png",
-    backgroundImage: "/images/pattern/bg2.jpg",
-    status: "building",
+    backgroundImage: "/images/pattern/bg3.jpg",
+    status: "live",
   },
   {
     cardTitle: "AI Queue Management",
@@ -33,7 +33,7 @@ export const projects: Project[] = [
     description:
       "An AI-powered queue management and patient scheduling system for hospitals and clinics, reducing wait time and streamlining appointments.",
     projectImage: "/images/projects/qmedix.png",
-    backgroundImage: "/images/pattern/bg3.jpg",
+    backgroundImage: "/images/pattern/bg1.jpg",
     status: "live",
   },
   {
@@ -42,7 +42,7 @@ export const projects: Project[] = [
     description:
       "A freelance-built business website for an office supplies company - showcasing products, services, and company information.",
     projectImage: "/images/projects/mehar-enterprises.png",
-    backgroundImage: "/images/pattern/bg4.jpg",
+    backgroundImage: "/images/pattern/bg2.jpg",
     status: "live",
   },
 ]

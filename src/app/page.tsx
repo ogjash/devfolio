@@ -29,6 +29,9 @@ export default function Home() {
       <Panel>
         <Projects />
       </Panel>
+
+      <SlantedLinesPanel className="p-5">
+      </SlantedLinesPanel>
       
 
     </main>
