@@ -122,6 +122,20 @@
   background-repeat: repeat-y, repeat-y;
 }
 
+@utility dashed-border-r {
+  background-image:
+    repeating-linear-gradient(
+      to bottom,
+      var(--color-edge) 0,
+      var(--color-edge) 6px,
+      transparent 6px,
+      transparent 14px
+    );
+  background-size: 1px 14px;
+  background-position: right top;
+  background-repeat: repeat-y;
+}
+
 :root {
   --background: #fafafa;
   --foreground: #16191d;

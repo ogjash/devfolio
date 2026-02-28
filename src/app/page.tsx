@@ -1,7 +1,8 @@
-import Experiences from "@/components/experiences";
-import { DotGridPanel, Panel, PanelHeader, SubPanel } from "@/components/panel";
+import Experiences from "@/views/home/experiences";
+import { DotGridPanel, Panel, PanelHeader, SlantedLinesPanel, SubPanel } from "@/components/panel";
 import { ProfileContent } from "@/views/home/profile-content";
 import { ProfileHeader } from "@/views/home/profile-header";
+import Projects from "@/views/home/projects";
 
 export default function Home() {
   return (
@@ -15,8 +16,18 @@ export default function Home() {
         <ProfileContent />
       </Panel>
 
+      <SlantedLinesPanel className="p-5">
+      </SlantedLinesPanel>
+
       <Panel>
         <Experiences />
+      </Panel>
+
+      <SlantedLinesPanel className="p-5">
+      </SlantedLinesPanel>
+
+      <Panel>
+        <Projects />
       </Panel>
       
 

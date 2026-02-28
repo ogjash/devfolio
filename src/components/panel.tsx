@@ -4,7 +4,11 @@ import React from "react";
 
 type PanelProps = React.HTMLAttributes<HTMLDivElement>;
 
-export function Panel({ className = "", children, ...props }: PanelProps) {
+export function Panel({ 
+  className = "", 
+  children, 
+  ...props 
+}: PanelProps) {
   return (
     <div className={`screen-line-after dashed-border-x ${className}`} {...props}>
       {children}
@@ -16,9 +20,13 @@ export function Panel({ className = "", children, ...props }: PanelProps) {
 
 type SubPanelProps = React.HTMLAttributes<HTMLDivElement>;
 
-export function SubPanel({ className = "", children, ...props }: SubPanelProps) {
+export function SubPanel({ 
+  className = "", 
+  children, 
+  ...props 
+}: SubPanelProps) {
   return (
-    <div className={`dashed-line-after dashed-border-x ${className}`} {...props}>
+    <div className={`dashed-line-after  ${className}`} {...props}>
       {children}
     </div>
   );
@@ -78,9 +86,38 @@ export function PanelContent({
   );
 }
 
+// ─── DividedPanel ─────────────────────────────────────────────────────────────
+
+type DividedPanelProps = PanelProps & {
+  left?: React.ReactNode;
+  right?: React.ReactNode;
+};
+
+export function DividedPanel({ 
+  className = "", 
+  left, 
+  right, 
+  ...props 
+}: DividedPanelProps) {
+  return (
+    <div className={`screen-line-after grid grid-cols-2 ${className}`} {...props}>
+      <div className="dashed-border-r">
+        {left}
+      </div>
+      <div>
+        {right}
+      </div>
+    </div>
+  );
+}
+
 // ─── DotGridPanel ─────────────────────────────────────────────────────────────
 
-export function DotGridPanel({ className = "", children, ...props }: PanelProps) {
+export function DotGridPanel({ 
+  className = "", 
+  children, 
+  ...props 
+}: PanelProps) {
   return (
     <div className={`screen-line-after dashed-border-x relative min-h-30 md:min-h-58 ${className}`} {...props}>
       <div
@@ -94,3 +131,26 @@ export function DotGridPanel({ className = "", children, ...props }: PanelProps)
     </div>
   );
 }
+
+// ─── SlantedLinesPanel ────────────────────────────────────────────────────────
+
+export function SlantedLinesPanel({ 
+  className = "", 
+  children, 
+  ...props 
+}: PanelProps) {
+  return (
+    <div className={`screen-line-after dashed-border-x relative ${className}`} {...props}>
+      <div
+        className="absolute inset-y-0 -z-10 left-1/2 -translate-x-1/2 w-screen"
+        style={{
+          backgroundImage:
+            "repeating-linear-gradient(135deg, color-mix(in srgb, var(--color-edge) 40%, transparent) 0, color-mix(in srgb, var(--color-edge) 40%, transparent) 1px, transparent 0, transparent 50%)",
+          backgroundSize: "8px 8px",
+        }}
+      />
+      {children}
+    </div>
+  );
+}
+

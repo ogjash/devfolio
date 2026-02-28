@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { PanelHeader, SubPanel } from "./panel"
+import { PanelHeader, SubPanel } from "../../components/panel"
 import {
   Collapsible,
   CollapsibleContent,
@@ -12,8 +12,8 @@ import { experiences, freelance, type Experience } from "@/data/experiences"
 import AvatarComponent from "@/components/avatar"
 import { Button } from "@/components/ui/button"
 
-function ExperienceItem({ experience }: { experience: Experience }) {
-  const [open, setOpen] = useState(false)
+function ExperienceItem({ experience, defaultOpen = false }: { experience: Experience; defaultOpen?: boolean }) {
+  const [open, setOpen] = useState(defaultOpen)
 
   return (
     <Collapsible open={open} onOpenChange={setOpen} className="p-1">
@@ -84,9 +84,15 @@ function ExperienceItem({ experience }: { experience: Experience }) {
 export default function Experiences() {
   return (
     <div>
-      <PanelHeader className="p-2 text-md md:text-lg font-bold">
+      <PanelHeader className="p-3 text-md md:text-lg font-bold">
         Experiences
       </PanelHeader>
+
+      <SubPanel>
+        {experiences.map((exp, i) => (
+          <ExperienceItem key={`exp-${i}`} experience={exp} defaultOpen={i === 0} />
+        ))}
+      </SubPanel>
 
       <SubPanel>
         {freelance.map((exp, i) => (
@@ -94,11 +100,7 @@ export default function Experiences() {
         ))}
       </SubPanel>
 
-      <SubPanel>
-        {experiences.map((exp, i) => (
-          <ExperienceItem key={`exp-${i}`} experience={exp} />
-        ))}
-      </SubPanel>
+
 
     </div>
   )
