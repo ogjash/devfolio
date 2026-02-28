@@ -100,8 +100,8 @@ export function DividedPanel({
   ...props 
 }: DividedPanelProps) {
   return (
-    <div className={`screen-line-after grid grid-cols-2 ${className}`} {...props}>
-      <div className="dashed-border-r">
+    <div className={`dashed-line-after grid grid-cols-1 md:grid-cols-2 ${className}`} {...props}>
+      <div className="dashed-line-after md:dashed-line-after-none md:dashed-border-r">
         {left}
       </div>
       <div>

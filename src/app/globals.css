@@ -101,6 +101,12 @@
   }
 }
 
+@utility dashed-line-after-none {
+  &::after {
+    display: none;
+  }
+}
+
 @utility dashed-border-x {
   background-image:
     repeating-linear-gradient(
