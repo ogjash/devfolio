@@ -36,6 +36,8 @@ export default function ProjectCard({ title, projectImage, backgroundImage }: Pr
           height={100}
           className="rounded-t-md border w-full h-auto"
         />
+        
+        
       </div>
     </div>
   )
