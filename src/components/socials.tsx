@@ -207,100 +207,101 @@ export function Codeforces() {
 export default function Socials() {
 
     return(
-        <PanelContent>
-                <h1 className="flex gap-1">
-                    Here are my 
-                    <span className="font-semibold">socials</span>
-                </h1>
+      <PanelContent>
+        <div className="p-3">
+          <h1 className="flex gap-1">
+            Here are my 
+            <span className="font-semibold">socials</span>
+          </h1>
 
 
-                <div className="flex flex-row flex-wrap gap-2 mt-2">
+          <div className="flex flex-row flex-wrap gap-2 mt-2">
 
-                    <Tooltip
-                        containerClassName="text-foreground bg-background dark:bg-background dark:text-foreground"
-                        content={<Github />}
-                        >
-                        <a href={socials.github.url}>
-                            <Button
-                                size="sm"
-                                variant="secondary"
-                            >
-                                <FaGithub />
-                                <span className="hidden sm:inline">{socials.github.label}</span>
-                            </Button>
-                        </a>
+            <Tooltip
+              containerClassName="text-foreground bg-background dark:bg-background dark:text-foreground"
+              content={<Github />}
+            >
+              <a href={socials.github.url}>
+                <Button
+                  size="sm"
+                  variant="secondary"
+                >
+                  <FaGithub />
+                  <span className="hidden sm:inline">{socials.github.label}</span>
+                </Button>
+              </a>
                         
-                    </Tooltip>
+            </Tooltip>
 
 
-                    <Tooltip
-                        containerClassName="text-foreground bg-background dark:bg-background dark:text-foreground"
-                        content={<Linkedin />}
-                        >
-                        <a href={socials.linkedin.url}>
-                            <Button
-                                size="sm"
-                                variant="secondary"
-                            >
-                                <FaLinkedin />
-                                <span className="hidden sm:inline">{socials.linkedin.label}</span>
-                            </Button>
-                        </a>
-                        
-                    </Tooltip>
+            <Tooltip
+              containerClassName="text-foreground bg-background dark:bg-background dark:text-foreground"
+              content={<Linkedin />}
+            >
+              <a href={socials.linkedin.url}>
+                <Button
+                    size="sm"
+                    variant="secondary"
+                >
+                    <FaLinkedin />
+                    <span className="hidden sm:inline">{socials.linkedin.label}</span>
+                </Button>
+              </a>
+                
+            </Tooltip>
                     
 
-                    <Tooltip
-                        containerClassName="text-foreground bg-background dark:bg-background dark:text-foreground"
-                        content={<Twitter />}
-                        >
-                        <a href={socials.twitter.url}>
-                            <Button
-                                size="sm"
-                                variant="secondary"
-                            >
-                                <FaXTwitter />
-                                <span className="hidden sm:inline">{socials.twitter.label}</span>
-                            </Button>
-                        </a>
-                        
-                    </Tooltip>
+            <Tooltip
+              containerClassName="text-foreground bg-background dark:bg-background dark:text-foreground"
+              content={<Twitter />}
+            >
+              <a href={socials.twitter.url}>
+                <Button
+                  size="sm"
+                  variant="secondary"
+                >
+                  <FaXTwitter />
+                  <span className="hidden sm:inline">{socials.twitter.label}</span>
+                </Button>
+              </a>
+            </Tooltip>
 
 
-                    <Tooltip
-                        containerClassName="text-foreground bg-background dark:bg-background dark:text-foreground"
-                        content={<Leetcode />}
-                        >
-                        <a href={socials.leetcode.url}>
-                            <Button
-                                size="sm"
-                                variant="secondary"
-                            >
-                                <SiLeetcode />
-                                <span className="hidden sm:inline">{socials.leetcode.label}</span>
-                            </Button>
-                        </a>
-                        
-                    </Tooltip>
+            <Tooltip
+              containerClassName="text-foreground bg-background dark:bg-background dark:text-foreground"
+              content={<Leetcode />}
+            >
+              <a href={socials.leetcode.url}>
+                <Button
+                    size="sm"
+                    variant="secondary"
+                >
+                    <SiLeetcode />
+                    <span className="hidden sm:inline">{socials.leetcode.label}</span>
+                </Button>
+              </a>    
+            </Tooltip>
                     
 
-                    <Tooltip
-                        containerClassName="text-foreground bg-background dark:bg-background dark:text-foreground"
-                        content={<Codeforces />}
-                        >
-                        <a href={socials.codeforces.url}>
-                            <Button
-                                size="sm"
-                                variant="secondary"
-                            >
-                                <SiCodeforces />
-                                <span className="hidden sm:inline">{socials.codeforces.label}</span>
-                            </Button>
-                        </a>
-                        
-                    </Tooltip>
+            <Tooltip
+              containerClassName="text-foreground bg-background dark:bg-background dark:text-foreground"
+              content={<Codeforces />}
+            >
+              <a href={socials.codeforces.url}>
+                <Button
+                    size="sm"
+                    variant="secondary"
+                >
+                    <SiCodeforces />
+                    <span className="hidden sm:inline">{socials.codeforces.label}</span>
+                </Button>
+              </a>
+                
+            </Tooltip>
                     
-                </div>
-            </PanelContent>
+          </div>
+                
+        </div>
+      </PanelContent>
     );
 };

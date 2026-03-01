@@ -171,8 +171,8 @@
   --code-foreground: #17191d;
   --code-number: #d19a66;
   --code-highlight: #e8e8e8;
-  --selection: #17191d;
-  --selection-foreground: #fafafa;
+  --selection: #23272e;
+  --selection-foreground: #abb2bf;
   --shadow-popover: 0 6px 24px rgba(0, 0, 0, 0.12);
   --radius: 0.625rem;
 }
@@ -206,8 +206,8 @@
   --code-foreground: #abb2bf;
   --code-number: #d19a66;
   --code-highlight: #2c313c;
-  --selection: #3e4451;
-  --selection-foreground: #abb2bf;
+  --selection: #fafafa;
+  --selection-foreground: #17191d;
   --shadow-popover: 0 0 24px rgba(0, 0, 0, 0.5);
 }
 

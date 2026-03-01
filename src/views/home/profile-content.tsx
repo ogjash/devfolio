@@ -15,7 +15,7 @@ export function ProfileContent() {
                     <p key={i} className={i > 0 ? "mt-2" : ""}>{paragraph}</p>
                 ))}
             </PanelContent>
-            <PanelContent className="px-3 flex flex-row gap-2 text-[0.9rem]">
+            <PanelContent className="p-3 flex flex-row gap-2 text-[0.9rem]">
                 <Button
                     variant="default"
                     className="h-9 group"
