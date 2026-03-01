@@ -9,7 +9,8 @@ import Skills from "@/views/home/skills";
 export default function Home() {
   return (
     <main className="max-w-180 mx-auto px-3">
-      <DotGridPanel/>
+      <DotGridPanel className="screen-line-after"/>
+
       <Panel>
         <ProfileHeader />
       </Panel>

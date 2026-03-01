@@ -101,7 +101,7 @@ export function DividedPanel({
 }: DividedPanelProps) {
   return (
     <div className={`dashed-line-after grid grid-cols-1 sm:grid-cols-2 ${className}`} {...props}>
-      <div className="dashed-line-after md:dashed-line-after-none sm:dashed-border-r">
+      <div className="dashed-line-after sm:dashed-line-after-none sm:dashed-border-r">
         {left}
       </div>
       <div>
@@ -119,7 +119,7 @@ export function DotGridPanel({
   ...props 
 }: PanelProps) {
   return (
-    <div className={`screen-line-after dashed-border-x relative min-h-30 md:min-h-58 ${className}`} {...props}>
+    <div className={`dashed-border-x relative min-h-30 md:min-h-58 ${className}`} {...props}>
       <div
         className="absolute inset-3 -z-10"
         style={{
