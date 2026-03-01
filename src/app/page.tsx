@@ -4,6 +4,7 @@ import { ProfileContent } from "@/views/home/profile-content";
 import { ProfileHeader } from "@/views/home/profile-header";
 import Projects from "@/views/home/projects";
 import Blogs from "@/views/home/blogs";
+import Skills from "@/views/home/skills";
 
 export default function Home() {
   return (
@@ -37,6 +38,12 @@ export default function Home() {
       <Panel>
         <Blogs />
       </Panel>
+
+      <Panel>
+        <Skills />
+      </Panel>
+
+      <DotGridPanel/>
 
     </main>
   );

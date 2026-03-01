@@ -10,7 +10,7 @@ import { MdEmail } from "react-icons/md";
 export function ProfileContent() {
     return(
         <PanelHeader className="relative flex flex-col tracking-tight">
-            <PanelContent className="text-[0.9rem] px-3">
+            <PanelContent className="text-[0.9rem] p-3">
                 {user.bio.map((paragraph, i) => (
                     <p key={i} className={i > 0 ? "mt-2" : ""}>{paragraph}</p>
                 ))}

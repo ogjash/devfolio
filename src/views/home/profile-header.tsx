@@ -9,7 +9,7 @@ import { motion } from "motion/react";
 
 export function ProfileHeader() {
   return (
-    <PanelHeader className="relative flex items-center gap-4 mx-4">
+    <PanelHeader className="relative flex items-center gap-4 px-4">
       <AvatarComponent src={user.avatar} alt={user.name} fallback={user.initials} />
       <div className="flex flex-col">
         <PanelTitle className="text-[1.5rem]">{user.name}</PanelTitle>
@@ -27,7 +27,7 @@ export function ProfileHeader() {
           ))}
         </TextFlip>
       </div>
-      <div className="absolute top-0 right-0 md:m-2">
+      <div className="absolute top-0 right-0 sm:p-2">
         <ThemeToggle />
       </div>
     </PanelHeader>

@@ -12,7 +12,7 @@ export const user = {
     "Full Stack Developer",
     "Freelancer",
     "Open Source Contributor",
-    "Learning Web3",
+    "Building Web3 Projects",
     "Turning ideas into reality",
     "Design Engineer",
   ],

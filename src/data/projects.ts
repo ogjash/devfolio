@@ -13,7 +13,7 @@ export const projects: Project[] = [
     cardTitle: "GenAI",
     title: "Meetinc",
     description:
-      "A platform to create AI agents tailored to specific niche - then join live meetings to have real-time conversations with your agents.",
+      "Create niche AI agents and have real-time meeting conversations.",
     projectImage: "/images/projects/coming-soon.png",
     backgroundImage: "/images/pattern/bg4.jpg",
     status: "building",
@@ -22,7 +22,7 @@ export const projects: Project[] = [
     cardTitle: "Student Drop Prediction",
     title: "MentorSignal",
     description:
-      "A platform for college mentors to predict student drop risk using our ML model, enabling early intervention and better student retention.",
+      "Predict student drop risk with ML for early mentor intervention.",
     projectImage: "/images/projects/mentor-signal.png",
     backgroundImage: "/images/pattern/bg3.jpg",
     status: "live",
@@ -31,7 +31,7 @@ export const projects: Project[] = [
     cardTitle: "AI Queue Management",
     title: "Qmedix",
     description:
-      "An AI-powered queue management and patient scheduling system for hospitals and clinics, reducing wait time and streamlining appointments.",
+      "AI-powered queue management and patient scheduling for hospitals and clinics.",
     projectImage: "/images/projects/qmedix.png",
     backgroundImage: "/images/pattern/bg1.jpg",
     status: "live",
@@ -40,7 +40,7 @@ export const projects: Project[] = [
     cardTitle: "Business Website",
     title: "Mehar Enterprises",
     description:
-      "A freelance-built business website for an office supplies company - showcasing products, services, and company information.",
+      "Business website for an office supplies company showcasing products and services.",
     projectImage: "/images/projects/mehar-enterprises.png",
     backgroundImage: "/images/pattern/bg2.jpg",
     status: "live",

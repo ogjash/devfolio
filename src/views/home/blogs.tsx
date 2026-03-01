@@ -1,6 +1,6 @@
 "use client"
 
-import { PanelHeader, SubPanel } from "@/components/panel";
+import { PanelContent, PanelHeader, SubPanel } from "@/components/panel";
 import { Button } from "@/components/ui/button";
 import { FaArrowUp } from "react-icons/fa6";
 import { MdOutlineDateRange } from "react-icons/md";
@@ -11,36 +11,33 @@ export function BlogContent({ blog }: { blog: Blog }) {
     return (
       <div className="p-1">
         <Link href={blog.link} target="_blank" className="block w-full cursor-pointer text-left px-2 group hover:bg-muted/50">
-            <div className="flex items-center gap-3">
-                <div className="p-3">
+          <div className="flex items-center gap-3">
+            <div className="p-3">
                 <h1 className="text-lg text-foreground font-semibold">{blog.title}</h1>
                 <span className="flex flex-row items-center gap-1 text-sm text-muted-foreground">
                     <MdOutlineDateRange />
-                    <span>
-                    {blog.date}
-                    </span>
+                    <span>{blog.date}</span>
                 </span>
                 
                 <div className="mt-3 flex flex-wrap gap-1.5">
-                    {blog.topics.map((topic) => (
-                        <Button
-                            key={topic}
-                            variant="outline"
-                            size="xs"
-                            className="h-6 text-xs rounded-sm cursor-default pointer-events-none"
-                            >
-                            {topic}
-                        </Button>
-                    ))}
+                {blog.topics.map((topic) => (
+                    <Button
+                        key={topic}
+                        variant="outline"
+                        size="xs"
+                        className="h-6 text-xs rounded-sm cursor-default pointer-events-none"
+                        >
+                        {topic}
+                    </Button>
+                ))}
                 </div>
-
-                </div>
-
-                <div className="hidden sm:block ml-auto mr-2 items-center gap-2 shrink-0">
-                    <FaArrowUp className="text-muted-foreground size-5 group-hover:text-foreground rotate-45 group-hover:rotate-90 transition-transform duration-200"/>
-                </div>
-
             </div>
+
+            <div className="hidden sm:block ml-auto mr-2 items-center gap-2 shrink-0">
+                <FaArrowUp className="text-muted-foreground size-5 group-hover:text-foreground rotate-45 group-hover:rotate-90 transition-transform duration-200"/>
+            </div>
+
+          </div>
         </Link>
       </div>
     )
@@ -58,6 +55,14 @@ export default function Blogs() {
             <BlogContent blog={blog} />
           </SubPanel>
         ))}
+
+        <PanelContent className="flex justify-center p-3">
+          <div className="relative rounded-md outline outline-border outline-offset-4 bg-muted">
+            <Button variant="default" className="group">
+            View All <FaArrowUp className="rotate-45 group-hover:scale-120 transition-transform" />
+            </Button>
+          </div>
+        </PanelContent>
       </div>
     )
 }

@@ -1,6 +1,6 @@
 "use client"
 
-import { DividedPanel, PanelHeader, SubPanel } from "@/components/panel";
+import { DividedPanel, PanelContent, PanelHeader, SubPanel } from "@/components/panel";
 import ProjectCard from "@/components/project-card";
 import { FaArrowUp } from "react-icons/fa6";
 import { projects } from "@/data/projects";
@@ -62,13 +62,13 @@ export default function Projects() {
             right={<ProjectSection project={projects[3]} />}
           />
 
-          <SubPanel className="flex justify-center p-3">
+          <PanelContent className="flex justify-center p-3">
             <div className="relative rounded-md outline outline-border outline-offset-4 bg-muted">
               <Button variant="default" className="group">
                 View All <FaArrowUp className="rotate-45 group-hover:scale-120 transition-transform" />
               </Button>
             </div>
-          </SubPanel>
+          </PanelContent>
         </div>
 
     )
