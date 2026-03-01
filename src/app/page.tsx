@@ -3,6 +3,7 @@ import { DotGridPanel, Panel, PanelHeader, SlantedLinesPanel, SubPanel } from "@
 import { ProfileContent } from "@/views/home/profile-content";
 import { ProfileHeader } from "@/views/home/profile-header";
 import Projects from "@/views/home/projects";
+import Blogs from "@/views/home/blogs";
 
 export default function Home() {
   return (
@@ -33,6 +34,9 @@ export default function Home() {
       <SlantedLinesPanel className="p-5">
       </SlantedLinesPanel>
       
+      <Panel>
+        <Blogs />
+      </Panel>
 
     </main>
   );

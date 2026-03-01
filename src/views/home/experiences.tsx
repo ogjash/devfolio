@@ -1,14 +1,14 @@
 "use client"
 
 import { useState } from "react"
-import { PanelHeader, SubPanel } from "../../components/panel"
+import { PanelContent, PanelHeader, SubPanel } from "../../components/panel"
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible"
 import { RiArrowDownSLine } from "react-icons/ri"
-import { experiences, freelance, type Experience } from "@/data/experiences"
+import { ex1, ex2, type Experience } from "@/data/experiences"
 import AvatarComponent from "@/components/avatar"
 import { Button } from "@/components/ui/button"
 
@@ -64,16 +64,16 @@ function ExperienceItem({ experience, defaultOpen = false }: { experience: Exper
         </ul>
         {experience.techStack.length > 0 && (
             <div className="px-2 pb-2 flex flex-wrap gap-1.5">
-            {experience.techStack.map((tech) => (
-                <Button
-                key={tech}
-                variant="outline"
-                size="sm"
-                className="h-6 text-xs rounded-sm cursor-default pointer-events-none"
-                >
-                {tech}
-                </Button>
-            ))}
+              {experience.techStack.map((tech) => (
+                  <Button
+                  key={tech}
+                  variant="outline"
+                  size="sm"
+                  className="h-6 text-xs rounded-sm cursor-default pointer-events-none"
+                  >
+                  {tech}
+                  </Button>
+              ))}
             </div>
         )}
       </CollapsibleContent>
@@ -89,16 +89,16 @@ export default function Experiences() {
       </PanelHeader>
 
       <SubPanel>
-        {experiences.map((exp, i) => (
+        {ex2.map((exp, i) => (
           <ExperienceItem key={`exp-${i}`} experience={exp} defaultOpen={i === 0} />
         ))}
       </SubPanel>
 
-      <SubPanel>
-        {freelance.map((exp, i) => (
+      <PanelContent>
+        {ex1.map((exp, i) => (
           <ExperienceItem key={`freelance-${i}`} experience={exp} />
         ))}
-      </SubPanel>
+      </PanelContent>
 
 
 

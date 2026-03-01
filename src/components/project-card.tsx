@@ -28,7 +28,7 @@ export default function ProjectCard({ title, projectImage, backgroundImage }: Pr
         </span>
       </div>
 
-      <div className="absolute bottom-[-10%] left-1/2 -translate-x-1/2 w-[85%] z-10 transition-all duration-400 group-hover:bottom-[-18%]">
+      <div className="relative bottom-[-10%] left-1/2 -translate-x-1/2 w-[85%] z-10 transition-all duration-400 group-hover:bottom-[-18%]">
         <Image
           src={projectImage}
           alt={title}

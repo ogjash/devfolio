@@ -80,7 +80,7 @@ export function PanelContent({
   ...props
 }: PanelContentProps) {
   return (
-    <div className={`p-2 ${className}`} {...props}>
+    <div className={`${className}`} {...props}>
       {children}
     </div>
   );
@@ -100,8 +100,8 @@ export function DividedPanel({
   ...props 
 }: DividedPanelProps) {
   return (
-    <div className={`dashed-line-after grid grid-cols-1 md:grid-cols-2 ${className}`} {...props}>
-      <div className="dashed-line-after md:dashed-line-after-none md:dashed-border-r">
+    <div className={`dashed-line-after grid grid-cols-1 sm:grid-cols-2 ${className}`} {...props}>
+      <div className="dashed-line-after md:dashed-line-after-none sm:dashed-border-r">
         {left}
       </div>
       <div>

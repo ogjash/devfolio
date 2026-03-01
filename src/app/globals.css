@@ -144,21 +144,21 @@
 
 :root {
   --background: #fafafa;
-  --foreground: #16191d;
-  --primary: #16191d;
+  --foreground: #17191d;
+  --primary: #17191d;
   --primary-foreground: #fafafa;
   --secondary: #f0f0f0;
-  --secondary-foreground: #16191d;
+  --secondary-foreground: #17191d;
   --muted: #f0f0f0;
   --muted-foreground: #5c6370;
   --card: #fafafa;
-  --card-foreground: #16191d;
+  --card-foreground: #17191d;
   --popover: #fafafa;
-  --popover-foreground: #16191d;
-  --popover-border: color-mix(in oklab, #16191d 15%, transparent);
+  --popover-foreground: #17191d;
+  --popover-border: color-mix(in oklab, #17191d 15%, transparent);
   --accent: #e8e8e8;
   --accent-muted: color-mix(in oklab, var(--accent) 50%, transparent);
-  --accent-foreground: #16191d;
+  --accent-foreground: #17191d;
   --border: #d3d3d3;
   --edge: color-mix(in oklab, var(--border) 64%, var(--background));
   --input: #d3d3d3;
@@ -168,20 +168,20 @@
   --destructive: #e06c75;
   --link: #61afef;
   --code: #f0f0f0;
-  --code-foreground: #16191d;
+  --code-foreground: #17191d;
   --code-number: #d19a66;
   --code-highlight: #e8e8e8;
-  --selection: #16191d;
+  --selection: #17191d;
   --selection-foreground: #fafafa;
   --shadow-popover: 0 6px 24px rgba(0, 0, 0, 0.12);
   --radius: 0.625rem;
 }
 
 .dark {
-  --background: #16191d;
+  --background: #17191d;
   --foreground: #abb2bf;
   --primary: #cbcbcb;
-  --primary-foreground: #16191d;
+  --primary-foreground: #17191d;
   --secondary: #23272e;
   --secondary-foreground: #abb2bf;
   --muted: #23272e;

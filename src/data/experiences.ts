@@ -8,7 +8,7 @@ export type Experience = {
   logo: string;
 };
 
-export const freelance: Experience[] = [
+export const ex1: Experience[] = [
   {
     title: "Full Stack Developer",
     subtitle: "Freelance",
@@ -25,7 +25,7 @@ export const freelance: Experience[] = [
   },
 ];
 
-export const experiences: Experience[] = [
+export const ex2: Experience[] = [
   {
     title: "ML Research Intern",
     subtitle: "IEEE NSUT",
