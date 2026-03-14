@@ -32,8 +32,8 @@ export default function ProjectCard({ title, projectImage, backgroundImage }: Pr
         <Image
           src={projectImage}
           alt={title}
-          width={100}
-          height={100}
+          width={500}
+          height={500}
           className="rounded-t-md border w-full h-auto"
         />
         
