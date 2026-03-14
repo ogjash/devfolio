@@ -6,18 +6,19 @@ import {
   SiPostgresql, SiMongodb, SiRedis, SiReactquery, SiPostman,
   SiTailwindcss, SiShadcnui, SiFramer, SiGreensock,
   SiJavascript, SiTypescript, SiPython, SiCplusplus, SiSolidity, SiRust,
-  SiGit, SiGithub, SiDocker, SiAmazonwebservices, SiLinux,
+  SiGit, SiGithub, SiDocker, SiLinux, SiDrizzle,
+  SiPrisma,
 } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
 import { TbMathFunction } from "react-icons/tb";
 import { type IconType } from "react-icons";
-
+import { FaAws } from "react-icons/fa6";
 const iconMap: Record<string, IconType> = {
   SiReact, SiNextdotjs, SiDjango, SiExpress, SiNodedotjs, SiBun,
-  SiPostgresql, SiMongodb, SiRedis, SiReactquery, SiPostman,
+  SiPostgresql, SiMongodb, SiDrizzle, SiRedis, SiPrisma, SiReactquery, SiPostman,
   SiTailwindcss, SiShadcnui, SiFramer, SiGreensock,
   SiJavascript, SiTypescript, SiPython, SiCplusplus, SiSolidity, SiRust, TbMathFunction, GrMysql,
-  SiGit, SiGithub, SiDocker, SiAmazonwebservices, SiLinux,
+  SiGit, SiGithub, SiDocker, FaAws, SiLinux,
 };
 
 export default function Skills(){
@@ -34,7 +35,7 @@ export default function Skills(){
                 key={skill.name}
                 variant="outline"
                 size="sm"
-                className="bg-background dark:bg-background hover:bg-muted hover:border-foreground flex-grow max-w-30"
+                className="bg-background dark:bg-background hover:bg-muted hover:border-foreground flex-grow max-w-35 gap-2"
               >
                 {Icon && <Icon />}
                 {skill.name}

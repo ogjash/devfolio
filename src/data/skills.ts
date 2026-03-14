@@ -12,7 +12,9 @@ export const skills: Skill[] = [
   { name: "Bun", icon: "SiBun" },
   { name: "PostgreSQL", icon: "SiPostgresql" },
   { name: "MongoDB", icon: "SiMongodb" },
+  { name: "Drizzle", icon: "SiDrizzle"},
   { name: "Redis", icon: "SiRedis" },
+  { name: "Prisma", icon: "SiPrisma" },
   { name: "Tanstack Query", icon: "SiReactquery" },
   { name: "Postman", icon: "SiPostman" },
   { name: "Tailwind", icon: "SiTailwindcss" },
@@ -30,6 +32,6 @@ export const skills: Skill[] = [
   { name: "Git", icon: "SiGit" },
   { name: "GitHub", icon: "SiGithub" },
   { name: "Docker", icon: "SiDocker" },
-  { name: "AWS", icon: "SiAmazonwebservices" },
+  { name: "AWS", icon: "FaAws" },
   { name: "Linux", icon: "SiLinux" },
 ];
