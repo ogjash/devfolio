@@ -23,7 +23,7 @@ export default function ProjectCard({ title, projectImage, backgroundImage }: Pr
       </div>
 
       <div className="relative z-10 pt-2 px-3">
-        <span className="block text-xs font-semibold text-foreground group-hover:text-primary-foreground drop-shadow-sm transition-all duration-400 left-0 group-hover:left-1/2 group-hover:-translate-x-1/2 relative w-fit">
+        <span className="block text-xs font-semibold text-foreground dark:group-hover:text-primary-foreground drop-shadow-sm transition-all duration-400 left-0 group-hover:left-1/2 group-hover:-translate-x-1/2 relative w-fit">
           {title}
         </span>
       </div>
