@@ -1,9 +1,9 @@
 "use client"
 
 export default function Quote(){
-    return(
-      <div>
-        ksmk
-      </div>
-    )
+  return(
+    <div>
+      ksmk
+    </div>
+  )
 }

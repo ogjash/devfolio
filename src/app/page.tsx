@@ -7,6 +7,7 @@ import Projects from "@/views/home/projects";
 import Blogs from "@/views/home/blogs";
 import Skills from "@/views/home/skills";
 import Newsletter from "@/views/home/newsletter";
+import Quote from "@/views/home/quote";
 
 export default function Home() {
   return (
