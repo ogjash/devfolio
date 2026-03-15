@@ -57,11 +57,11 @@ export default function Home() {
         <Newsletter />
       </Panel>
 
-      <DotGridPanel/>
-
       <Panel>
         <Quote />
       </Panel>
+
+      <DotGridPanel/>
 
     </main>
   );

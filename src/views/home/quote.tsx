@@ -2,8 +2,8 @@
 
 export default function Quote(){
   return(
-    <div>
-      ksmk
+    <div className="">
+      
     </div>
   )
 }
