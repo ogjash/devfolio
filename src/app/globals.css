@@ -145,7 +145,7 @@
 :root {
   --background: #fafafa;
   --foreground: #17191d;
-  --primary: #17191d;
+  --primary: #353b47;
   --primary-foreground: #fafafa;
   --secondary: #f0f0f0;
   --secondary-foreground: #17191d;
@@ -180,8 +180,8 @@
 .dark {
   --background: #17191d;
   --foreground: #abb2bf;
-  --primary: #cbcbcb;
-  --primary-foreground: #17191d;
+  --primary: #c6cede;
+  --primary-foreground: #22262d;
   --secondary: #23272e;
   --secondary-foreground: #abb2bf;
   --muted: #23272e;

@@ -2,23 +2,18 @@ import { PanelHeader } from "@/components/panel";
 import { Button } from "@/components/ui/button";
 import { skills } from "@/data/skills";
 import {
-  SiReact, SiNextdotjs, SiDjango, SiExpress, SiNodedotjs, SiBun,
-  SiPostgresql, SiMongodb, SiRedis, SiReactquery, SiPostman,
-  SiTailwindcss, SiShadcnui, SiFramer, SiGreensock,
-  SiJavascript, SiTypescript, SiPython, SiCplusplus, SiSolidity, SiRust,
-  SiGit, SiGithub, SiDocker, SiLinux, SiDrizzle,
-  SiPrisma,
+  SiReact, SiNextdotjs, SiDjango, SiExpress, SiNodedotjs, SiBun, SiPostgresql, SiMongodb, SiRedis, SiReactquery, SiPostman, SiTailwindcss, SiShadcnui, SiFramer, SiGreensock, SiJavascript, SiTypescript, SiPython, SiCplusplus, SiSolidity, SiRust, SiGit, SiGithub, SiDocker, SiLinux, SiDrizzle, SiPrisma
 } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
 import { TbMathFunction } from "react-icons/tb";
 import { type IconType } from "react-icons";
-import { FaAws } from "react-icons/fa6";
+import { FaAws, FaJava, FaFigma } from "react-icons/fa6";
 const iconMap: Record<string, IconType> = {
   SiReact, SiNextdotjs, SiDjango, SiExpress, SiNodedotjs, SiBun,
   SiPostgresql, SiMongodb, SiDrizzle, SiRedis, SiPrisma, SiReactquery, SiPostman,
   SiTailwindcss, SiShadcnui, SiFramer, SiGreensock,
-  SiJavascript, SiTypescript, SiPython, SiCplusplus, SiSolidity, SiRust, TbMathFunction, GrMysql,
-  SiGit, SiGithub, SiDocker, FaAws, SiLinux,
+  SiJavascript, SiTypescript, SiPython, SiCplusplus, FaJava, SiSolidity, SiRust, TbMathFunction, GrMysql,
+  SiGit, SiGithub, FaFigma, SiDocker, FaAws, SiLinux,
 };
 
 export default function Skills(){
