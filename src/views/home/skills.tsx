@@ -1,3 +1,5 @@
+"use client"
+
 import { PanelHeader } from "@/components/panel";
 import { Button } from "@/components/ui/button";
 import { skills } from "@/data/skills";
