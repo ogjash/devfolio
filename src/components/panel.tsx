@@ -160,7 +160,7 @@ export function SlantedLinesSubPanel({
   ...props 
 }: PanelProps) {
   return (
-    <div className={`dashed-line-after dashed-border-x relative ${className}`} {...props}>
+    <div className={`screen-line-after dashed-border-x relative ${className}`} {...props}>
       <div
         className="absolute inset-y-0 -z-10 left-1/2 -translate-x-1/2 w-full"
         style={{
