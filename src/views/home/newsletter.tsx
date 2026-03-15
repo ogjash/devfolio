@@ -12,9 +12,9 @@ export default function Newsletter(){
         </PanelHeader>
         <SubPanel>
           <SlantedLinesSubPanel className="p-7">
-            <div className="flex gap-5">
+            <div className="flex flex-col sm:flex-row gap-5">
               <Input placeholder="Enter your email"/>
-              <div className="relative rounded-md ring ring-border ring-offset-2 ring-offset-background bg-muted">
+              <div className="w-fit ml-auto rounded-md ring ring-border ring-offset-2 ring-offset-background bg-muted">
                 <Button variant="default" className="group px-6">
                   Subscribe
                 </Button>
