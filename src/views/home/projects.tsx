@@ -1,24 +1,13 @@
 "use client"
 
+import { useRouter } from "next/navigation";
 import { DividedPanel, PanelContent, PanelHeader, SubPanel } from "@/components/panel";
 import ProjectCard from "@/components/project-card";
+import { StatusSignal } from "@/components/status-signal";
 import { FaArrowUp } from "react-icons/fa6";
 import { projects } from "@/data/projects";
 import type { Project } from "@/data/projects";
 import { Button } from "@/components/ui/button";
-
-function StatusSignal({ status }: { status: "live" | "building" }) {
-  const isLive = status === "live"
-  return (
-    <span className={`inline-flex items-center gap-2 px-1.5 py-0.5 rounded-full text-sm font-semibold text-muted-foreground`}>
-      <span className="relative flex h-1.5 w-1.5">
-        <span className={`absolute inline-flex h-full w-full animate-ping rounded-full opacity-75 ${isLive ? "bg-success" : "bg-destructive"}`} />
-        <span className={`relative inline-flex h-1.5 w-1.5 rounded-full ${isLive ? "bg-success" : "bg-destructive"}`} />
-      </span>
-      {isLive ? "Live" : "Building"}
-    </span>
-  )
-}
 
 export function ProjectSection({ project }: { project: Project }) {
     return(
@@ -30,15 +19,19 @@ export function ProjectSection({ project }: { project: Project }) {
         />
 
         <div className="flex flex-col mt-3">
-            <div className="flex items-center">
-                <h1 className="text-foreground font-semibold">{project.title}</h1>
-                <div className="ml-auto"><StatusSignal status={project.status} /></div>
+          <div className="flex items-center">
+            <h1 className="text-foreground font-semibold">      
+              {project.title}
+            </h1>
+            <div className="ml-auto">
+              <StatusSignal status={project.status} />
             </div>
-            <p className="text-muted-foreground text-sm">{project.description}</p>
+          </div>
+          <p className="text-muted-foreground text-sm">{project.description}</p>
         </div>
 
         <div className="flex items-center gap-2 mt-1 text-sm text-muted-foreground group-hover:text-foreground">
-            View Project <FaArrowUp className="rotate-45 group-hover:rotate-90 transition-transform" />
+          View Project <FaArrowUp className="rotate-45 group-hover:rotate-90 transition-transform" />
         </div>
 
       </div>
@@ -46,6 +39,8 @@ export function ProjectSection({ project }: { project: Project }) {
 }
 
 export default function Projects() {
+    const router = useRouter();
+
     return(
         <div>
           <PanelHeader className="p-3 text-md md:text-lg font-bold">
@@ -64,7 +59,7 @@ export default function Projects() {
 
           <PanelContent className="flex justify-center p-3">
             <div className="relative rounded-md outline outline-border outline-offset-4 bg-muted">
-              <Button variant="default" className="group">
+              <Button variant="default" className="group" onClick={() => router.push('/projects')}>
                 View All <FaArrowUp className="rotate-45 group-hover:scale-120 transition-transform" />
               </Button>
             </div>
