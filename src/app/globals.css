@@ -264,3 +264,27 @@
     transition: none;
   }
 }
+
+@layer components {
+  .underline-expand {
+    position: relative;
+    text-decoration: none;
+  }
+
+  .underline-expand::after {
+    content: '';
+    position: absolute;
+    bottom: 3px;
+    left: -4;
+    width: 125%;
+    height: 1px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  .underline-expand:hover::after {
+    transform: scaleX(1);
+  }
+}

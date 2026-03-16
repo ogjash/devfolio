@@ -1,12 +1,15 @@
 "use client"
 
-import { DividedPanel, PanelContent, PanelHeader } from "@/components/panel";
+import { DividedPanel, PanelHeader } from "@/components/panel";
 import ProjectCard from "@/components/project-card";
 import { FaArrowUp } from "react-icons/fa6";
 import { projects } from "@/data/projects";
 import type { Project } from "@/data/projects";
 import { BackButton } from "@/components/back-button";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { Button } from "@/components/ui/button";
+import { user } from "@/data/user";
+
 
 function StatusSignal({ status }: { status: "live" | "building" }) {
   const isLive = status === "live"
@@ -71,6 +74,22 @@ export default function ProjectsPage() {
           left={<ProjectSection project={projects[4]} />}
           right={<ProjectSection project={projects[5]} />}
         />
+
+        <div className="flex items-center justify-center p-3 gap-3">
+            <div>
+                For more cool projects, visit my
+            </div>
+            <div className="flex items-center gap-2 group">
+              <Button 
+                variant="link"
+                size="icon-sm"
+                onClick={() => window.open(`https://github.com/${user.github}`, '_blank')}
+              >
+                Github
+              </Button>
+              <FaArrowUp className="size-3 rotate-45 opacity-0 group-hover:opacity-100 transition-opacity" />
+            </div>
+        </div>
       </main>
     )
 }
