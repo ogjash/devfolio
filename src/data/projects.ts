@@ -10,6 +10,15 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    cardTitle: "CP Platform",
+    title: "CodeConquer",
+    description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam.",
+    projectImage:"/images/projects/coming-soon.png",
+    backgroundImage: "/images/pattern/bg5.jpg",
+    status: "building",
+  },
+  {
     cardTitle: "GenAI",
     title: "Meetinc",
     description:
@@ -34,6 +43,15 @@ export const projects: Project[] = [
       "AI-powered queue management and patient scheduling for hospitals and clinics.",
     projectImage: "/images/projects/qmedix.png",
     backgroundImage: "/images/pattern/bg1.jpg",
+    status: "live",
+  },
+  {
+    cardTitle: "Web3 Wallet",
+    title: "Shulkur",
+    description:
+      "Web based crypto wallet based on Solana and Ethereum blockchain.",
+    projectImage: "/images/projects/shulker.png",
+    backgroundImage: "/images/pattern/bg6.jpg",
     status: "live",
   },
   {

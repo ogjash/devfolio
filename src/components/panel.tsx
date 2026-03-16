@@ -145,7 +145,7 @@ export function SlantedLinesPanel({
         className="absolute inset-y-0 -z-10 left-1/2 -translate-x-1/2 w-screen"
         style={{
           backgroundImage:
-            "repeating-linear-gradient(135deg, color-mix(in srgb, var(--color-edge) 70%, transparent) 0, color-mix(in srgb, var(--color-edge) 70%, transparent) 1px, transparent 0, transparent 50%)",
+            "repeating-linear-gradient(135deg, color-mix(in srgb, var(--color-edge) 40%, transparent) 0, color-mix(in srgb, var(--color-edge) 40%, transparent) 1px, transparent 0, transparent 50%)",
           backgroundSize: "8px 8px",
         }}
       />

@@ -18,9 +18,11 @@ export function ThemeToggle() {
   return (
     <Button
       variant="ghost"
+      className="transition-transform hover:border hover:border-border"
       size="icon-sm"
       onClick={() => setTheme(isDark ? "light" : "dark")}
       aria-label="Toggle theme"
+
     >
       {isDark ? (
         <MdOutlineLightMode className="size-4" />

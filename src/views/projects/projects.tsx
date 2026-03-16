@@ -1,11 +1,12 @@
 "use client"
 
-import { DividedPanel, PanelContent, PanelHeader, SubPanel } from "@/components/panel";
+import { DividedPanel, PanelContent, PanelHeader } from "@/components/panel";
 import ProjectCard from "@/components/project-card";
 import { FaArrowUp } from "react-icons/fa6";
 import { projects } from "@/data/projects";
 import type { Project } from "@/data/projects";
-import { Button } from "@/components/ui/button";
+import { BackButton } from "@/components/back-button";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 function StatusSignal({ status }: { status: "live" | "building" }) {
   const isLive = status === "live"
@@ -45,31 +46,31 @@ export function ProjectSection({ project }: { project: Project }) {
     )
 }
 
-export default function Projects() {
+export default function ProjectsPage() {
     return(
-        <div>
-          <PanelHeader className="p-3 text-md md:text-lg font-bold">
-            Projects
-          </PanelHeader>
+      <main>
+        <PanelHeader className="flex items-center p-3 text-md md:text-lg font-bold gap-1">
+          <BackButton />
+          <div>Projects</div>
+          <div className="absolute right-0 sm:p-2">
+            <ThemeToggle />
+          </div>
+        </PanelHeader>
 
-          <DividedPanel 
-            left={<ProjectSection project={projects[0]} />}
-            right={<ProjectSection project={projects[1]} />}
-          />
+        <DividedPanel 
+          left={<ProjectSection project={projects[0]} />}
+          right={<ProjectSection project={projects[1]} />}
+        />
+        
+        <DividedPanel 
+          left={<ProjectSection project={projects[2]} />}
+          right={<ProjectSection project={projects[3]} />}
+        />
 
-          <DividedPanel 
-            left={<ProjectSection project={projects[2]} />}
-            right={<ProjectSection project={projects[3]} />}
-          />
-
-          <PanelContent className="flex justify-center p-3">
-            <div className="relative rounded-md outline outline-border outline-offset-4 bg-muted">
-              <Button variant="default" className="group">
-                View All <FaArrowUp className="rotate-45 group-hover:scale-120 transition-transform" />
-              </Button>
-            </div>
-          </PanelContent>
-        </div>
-
+        <DividedPanel 
+          left={<ProjectSection project={projects[4]} />}
+          right={<ProjectSection project={projects[5]} />}
+        />
+      </main>
     )
 }
