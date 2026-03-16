@@ -1,4 +1,6 @@
-import { DotGridPanel, Panel, PanelHeader, SlantedLinesPanel, SubPanel } from "@/components/panel";
+"use client"
+
+import { DotGridPanel, Panel } from "@/components/panel";
 
 import ProjectsPage from "@/views/projects/projects";
 
