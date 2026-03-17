@@ -1,34 +1,13 @@
 "use client";
 
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
-import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
-import { Button } from "@/components/ui/button";
+import { ToggleTheme } from "./lightswind/toggle-theme";
 
 export function ThemeToggle() {
-  const { resolvedTheme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => setMounted(true), []);
-
-  if (!mounted) return <div className="size-8" />;
-
-  const isDark = resolvedTheme === "dark";
-
   return (
-    <Button
-      variant="ghost"
-      className="transition-transform hover:border hover:border-border"
-      size="icon-sm"
-      onClick={() => setTheme(isDark ? "light" : "dark")}
+    <ToggleTheme
+      animationType="swipe-down"
+      duration={600}
       aria-label="Toggle theme"
-
-    >
-      {isDark ? (
-        <MdOutlineLightMode className="size-4" />
-      ) : (
-        <MdOutlineDarkMode className="size-4" />
-      )}
-    </Button>
+    />
   );
 }
