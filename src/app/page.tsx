@@ -1,4 +1,4 @@
-import { DotGridPanel, Panel, PanelHeader, SlantedLinesPanel, SubPanel } from "@/components/panel";
+import { DotGridPanel, Panel, SlantedLinesPanel } from "@/components/panel";
 
 import { ProfileHeader } from "@/views/home/profile-header";
 import { ProfileContent } from "@/views/home/profile-content";
@@ -8,6 +8,7 @@ import Blogs from "@/views/home/blogs";
 import Skills from "@/views/home/skills";
 import Newsletter from "@/views/home/newsletter";
 import Quote from "@/views/home/quote";
+import { ScrollToTop } from "@/components/scroll-to-top";
 
 export default function Home() {
   return (

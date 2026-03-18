@@ -59,8 +59,11 @@ export default function Projects() {
 
           <PanelContent className="flex justify-center p-3">
             <div className="relative rounded-md outline outline-border outline-offset-4 bg-muted">
-              <Button variant="default" className="group" onClick={() => router.push('/projects')}>
-                View All <FaArrowUp className="rotate-45 group-hover:scale-120 transition-transform" />
+              <Button 
+                variant="default" 
+                className="group" 
+                onClick={() => router.push('/projects')}>
+                  View All <FaArrowUp className="rotate-45 group-hover:scale-120 transition-transform" />
               </Button>
             </div>
           </PanelContent>
