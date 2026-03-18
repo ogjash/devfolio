@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react"
 import { Moon, Sun } from "lucide-react"
 import { flushSync } from "react-dom"
+import { useSound } from "react-sounds"
 
 import { cn } from "@/lib/utils"
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md"
@@ -43,6 +44,7 @@ export const ToggleTheme = ({
 }: ToggleThemeProps) => {
     const [isDark, setIsDark] = useState(false)
     const buttonRef = useRef<HTMLButtonElement>(null)
+    const { play } = useSound('ui/window_open')
 
     useEffect(() => {
         const updateTheme = () => {
@@ -72,6 +74,9 @@ export const ToggleTheme = ({
                 localStorage.setItem("theme", newTheme ? "dark" : "light")
             })
         }).ready
+
+        // Play sound effect when theme toggles
+        play({volume:0.3})
 
         // Calculate coordinates and dimensions for spatial animations
         const { top, left, width, height } =
