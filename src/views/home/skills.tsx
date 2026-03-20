@@ -19,6 +19,10 @@ const iconMap: Record<string, IconType> = {
 };
 
 export default function Skills(){
+    const handleSkillClick = (url: string) => {
+      window.open(url, '_blank');
+    };
+
     return(
       <div>
         <PanelHeader className="p-3 text-md md:text-lg font-bold">
@@ -32,7 +36,8 @@ export default function Skills(){
                 key={skill.name}
                 variant="outline"
                 size="sm"
-                className="bg-background dark:bg-background hover:bg-muted hover:border-foreground flex-grow max-w-35 gap-2"
+                className="bg-background dark:bg-background hover:bg-muted hover:border-foreground flex-grow max-w-35 gap-2 cursor-pointer"
+                onClick={() => handleSkillClick(skill.url)}
               >
                 {Icon && <Icon />}
                 {skill.name}
