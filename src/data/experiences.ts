@@ -35,7 +35,7 @@ export const ex2: Experience[] = [
       "Built and compared LSTM, BiLSTM and a custom Residual Seq2Seq model to predict EV charging load",
       "Used PCA to reduce input dimensions, which helped improve accuracy and speed up training",
       "The Residual Seq2Seq model performed best — RMSE of 0.111 and MAE of 0.073",
-      "Research is published on IEEE Xplore",
+      "Research was published on IEEE Xplore",
     ],
     techStack: ["Python", "TensorFlow", "Keras", "Scikit-learn", "Pandas", "NumPy"],
     logo: "/images/experiences/ieee.svg",
