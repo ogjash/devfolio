@@ -15,8 +15,8 @@ export const ex1: Experience[] = [
     timeline: "Sep, 2025 - Present",
     location: "India - Remote",
     description: [
-      "Built pixel-perfect websites end-to-end with smooth, thoughtful user experience",
-      "Worked closely with clients to turn rough ideas into clean, usable products",
+      "Built pixel-perfect websites with smooth, thoughtful user experience",
+      "Worked closely with clients to turn rough ideas into clean, scalable products",
       "Handled everything from design implementation to deployment and hosting",
       "Focused on performance, responsiveness, and intuitive, fast user interactions",
     ],
