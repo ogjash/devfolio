@@ -30,6 +30,7 @@ export const projects: Project[] = [
   {
     cardTitle: "Student Drop Prediction",
     title: "MentorSignal",
+    link: "https://sih-impact-crew.vercel.app",
     description:
       "Predict student drop risk with ML for early mentor intervention.",
     projectImage: "/images/projects/mentor-signal.png",
@@ -39,6 +40,7 @@ export const projects: Project[] = [
   {
     cardTitle: "AI Queue Management",
     title: "Qmedix",
+    link: "https://qmedix.vercel.app",
     description:
       "AI-powered queue management and patient scheduling for hospitals and clinics.",
     projectImage: "/images/projects/qmedix.png",
@@ -48,6 +50,7 @@ export const projects: Project[] = [
   {
     cardTitle: "Web3 Wallet",
     title: "Shulkur",
+    link: "https://shulker-wallet.vercel.app",
     description:
       "Web based crypto wallet based on Solana and Ethereum blockchain.",
     projectImage: "/images/projects/shulker.png",
@@ -57,6 +60,7 @@ export const projects: Project[] = [
   {
     cardTitle: "Business Website",
     title: "Mehar Enterprises",
+    link: "https://mehar-enterprises.vercel.app",
     description:
       "Business website for an office supplies company showcasing products and services.",
     projectImage: "/images/projects/mehar-enterprises.png",

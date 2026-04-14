@@ -14,7 +14,14 @@ import { user } from "@/data/user";
 
 export function ProjectSection({ project }: { project: Project }) {
     return(
-      <div className="p-4 group cursor-pointer">
+      <div 
+        className="p-4 group cursor-pointer"
+        onClick={() => {
+          if (project.link) {
+            window.open(project.link, "_blank", "noopener,noreferrer");
+          }
+        }}
+      >
         <ProjectCard
           title={project.cardTitle}
           projectImage={project.projectImage}

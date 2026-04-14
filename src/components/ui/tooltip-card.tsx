@@ -121,6 +121,15 @@ export const Tooltip = ({
   const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
     // Toggle visibility on click for mobile devices
     if (window.matchMedia("(hover: none)").matches) {
+      // Check if the clicked element is an anchor tag or inside one
+      const target = e.target as HTMLElement;
+      const isLink = target.tagName === 'A' || target.closest('a');
+      
+      // Allow link clicks to proceed
+      if (isLink) {
+        return;
+      }
+      
       e.preventDefault();
       if (isVisible) {
         setIsVisible(false);
