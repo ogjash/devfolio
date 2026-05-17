@@ -12,10 +12,11 @@ import { ScrollToTop } from "@/components/scroll-to-top";
 
 export default function Home() {
   return (
-    <main className="max-w-180 mx-auto px-3">
-      <DotGridPanel />
+    <main className="max-w-180 mx-auto">
 
-      <div className="relative screen-line-after" />
+      <div className="dashed-border-x screen-line-after p-3">
+        <DotGridPanel />
+      </div>
 
       <Panel>
         <ProfileHeader />
@@ -64,7 +65,9 @@ export default function Home() {
         <Quote />
       </Panel>
 
-      <DotGridPanel/>
+      <div className="dashed-border-x p-3">
+        <DotGridPanel />
+      </div>
 
     </main>
   );

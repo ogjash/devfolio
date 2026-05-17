@@ -120,8 +120,8 @@ export function DotGridPanel({
   ...props 
 }: PanelProps) {
   return (
-    <div className={`dashed-border-x relative min-h-30 md:min-h-58 overflow-hidden ${className}`} {...props}>
-      <div className="absolute inset-0 p-3">
+    <div className={`relative min-h-30 md:min-h-58 overflow-hidden ${className}`} {...props}>
+      <div className="absolute">
         <LiquidGlassAscii />
       </div>
       <div className="relative">

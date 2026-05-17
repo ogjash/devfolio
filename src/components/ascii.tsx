@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 
-const CHAR = "          `~._JASHAN_.~`      `~._JASHAN_.~`";
+const CHAR = "`~._SINGH_.~`      `~._SINGH_.~`";
 const MAX = CHAR.length * 2;
 
 const FRAMES = 2000;
@@ -403,7 +403,7 @@ const LiquidGlassAscii: React.FC = () => {
   return (
     <div
       ref={containerRef}
-      className="relative h-full w-full overflow-hidden bg-background"
+      className="relative h-screen w-screen overflow-hidden bg-background"
     >
       <div className="absolute inset-0 bg-background backdrop-blur-[2px]" />
 
@@ -425,7 +425,7 @@ const LiquidGlassAscii: React.FC = () => {
           font-thin
           text-[0.72vw]
           md:text-[0.7vw]
-          sm:text-[1.5vw]
+          sm:text-[1.0vw]
           pointer-events-auto
         "
         style={{
