@@ -13,7 +13,9 @@ import { ScrollToTop } from "@/components/scroll-to-top";
 export default function Home() {
   return (
     <main className="max-w-180 mx-auto px-3">
-      <DotGridPanel className="screen-line-after"/>
+      <DotGridPanel />
+
+      <div className="relative screen-line-after" />
 
       <Panel>
         <ProfileHeader />

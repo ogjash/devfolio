@@ -1,4 +1,5 @@
 import React from "react";
+import LiquidGlassAscii from "./ascii";
 
 // ─── Panel ────────────────────────────────────────────────────────────────────
 
@@ -119,15 +120,13 @@ export function DotGridPanel({
   ...props 
 }: PanelProps) {
   return (
-    <div className={`dashed-border-x relative min-h-30 md:min-h-58 ${className}`} {...props}>
-      <div
-        className="absolute inset-3 -z-10"
-        style={{
-          backgroundImage: "radial-gradient(circle, var(--color-edge) 1px, transparent 1px)",
-          backgroundSize: "7px 7px",
-        }}
-      />
-      {children}
+    <div className={`dashed-border-x relative min-h-30 md:min-h-58 overflow-hidden ${className}`} {...props}>
+      <div className="absolute inset-0 p-3">
+        <LiquidGlassAscii />
+      </div>
+      <div className="relative">
+        {children}
+      </div>
     </div>
   );
 }
