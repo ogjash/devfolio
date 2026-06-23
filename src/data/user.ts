@@ -2,6 +2,7 @@ export const user = {
   name: "Jashan Preet Singh",
   avatar: "/images/profile.png",
   initials: "OG",
+  resume: "https://drive.google.com/file/d/1Z3eyP_Z_hnX-5mRRCrf7Se_uoTeJDVoL/view?usp=sharing",
   github: "ogjash",
   email: "",
   bio: [

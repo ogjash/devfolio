@@ -8,7 +8,6 @@ import Blogs from "@/views/home/blogs";
 import Skills from "@/views/home/skills";
 import Newsletter from "@/views/home/newsletter";
 import Quote from "@/views/home/quote";
-import { ScrollToTop } from "@/components/scroll-to-top";
 
 export default function Home() {
   return (

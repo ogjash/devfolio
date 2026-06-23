@@ -6,6 +6,10 @@ import { TextFlip } from "@/components/text-flip";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { user } from "@/data/user";
 import { motion } from "motion/react";
+import Link from "next/link";
+
+import { HiOutlineDownload } from "react-icons/hi";
+
 
 export function ProfileHeader() {
   return (
@@ -27,8 +31,15 @@ export function ProfileHeader() {
           ))}
         </TextFlip>
       </div>
+
       <div className="absolute top-0 right-0 sm:p-2">
         <ThemeToggle />
+      </div>
+
+      <div  className="absolute text-sm font-semibold bottom-0 right-0 py-1 sm:py-2 px-2 sm:px-4 cursor-pointer">
+        <Link href={user.resume} target="_blank" className="flex items-center justify-center gap-1">
+          <HiOutlineDownload className="size-4"/> Resume
+        </Link>
       </div>
     </PanelHeader>
   );

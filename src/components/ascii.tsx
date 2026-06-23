@@ -419,7 +419,7 @@ const LiquidGlassAscii: React.FC = () => {
           whitespace-pre
           select-none
           font-mono
-          text-edge
+          text-edge/50
           leading-[1.05]
           tracking-[0.01em]
           font-thin

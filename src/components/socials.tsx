@@ -12,6 +12,9 @@ import { HiOutlineLocationMarker } from "react-icons/hi";
 import { Tooltip } from "@/components/ui/tooltip-card";
 import { socials } from "@/data/socials";
 
+import Link from "next/link";
+
+
 export function Github() {
     const { profile: p } = socials.github;
     return(
@@ -221,7 +224,7 @@ export default function Socials() {
               containerClassName="text-foreground bg-background dark:bg-background dark:text-foreground"
               content={<Github />}
             >
-              <a href={socials.github.url}>
+              <Link href={socials.github.url} target="_blank">
                 <Button
                   size="sm"
                   variant="secondary"
@@ -229,7 +232,7 @@ export default function Socials() {
                   <FaGithub />
                   <span className="hidden sm:inline">{socials.github.label}</span>
                 </Button>
-              </a>
+              </Link>
                         
             </Tooltip>
 
@@ -238,7 +241,7 @@ export default function Socials() {
               containerClassName="text-foreground bg-background dark:bg-background dark:text-foreground"
               content={<Linkedin />}
             >
-              <a href={socials.linkedin.url}>
+              <Link href={socials.linkedin.url} target="_blank">
                 <Button
                     size="sm"
                     variant="secondary"
@@ -246,7 +249,7 @@ export default function Socials() {
                     <FaLinkedin />
                     <span className="hidden sm:inline">{socials.linkedin.label}</span>
                 </Button>
-              </a>
+              </Link>
                 
             </Tooltip>
                     
@@ -255,7 +258,7 @@ export default function Socials() {
               containerClassName="text-foreground bg-background dark:bg-background dark:text-foreground"
               content={<Twitter />}
             >
-              <a href={socials.twitter.url}>
+              <Link href={socials.twitter.url} target="_blank">
                 <Button
                   size="sm"
                   variant="secondary"
@@ -263,7 +266,7 @@ export default function Socials() {
                   <FaXTwitter />
                   <span className="hidden sm:inline">{socials.twitter.label}</span>
                 </Button>
-              </a>
+              </Link>
             </Tooltip>
 
 
@@ -271,7 +274,7 @@ export default function Socials() {
               containerClassName="text-foreground bg-background dark:bg-background dark:text-foreground"
               content={<Leetcode />}
             >
-              <a href={socials.leetcode.url}>
+              <Link href={socials.leetcode.url} target="_blank">
                 <Button
                     size="sm"
                     variant="secondary"
@@ -279,7 +282,7 @@ export default function Socials() {
                     <SiLeetcode />
                     <span className="hidden sm:inline">{socials.leetcode.label}</span>
                 </Button>
-              </a>    
+              </Link>    
             </Tooltip>
                     
 
@@ -287,7 +290,7 @@ export default function Socials() {
               containerClassName="text-foreground bg-background dark:bg-background dark:text-foreground"
               content={<Codeforces />}
             >
-              <a href={socials.codeforces.url}>
+              <Link href={socials.codeforces.url} target="_blank">
                 <Button
                     size="sm"
                     variant="secondary"
@@ -295,7 +298,7 @@ export default function Socials() {
                     <SiCodeforces />
                     <span className="hidden sm:inline">{socials.codeforces.label}</span>
                 </Button>
-              </a>
+              </Link>
                 
             </Tooltip>
                     
